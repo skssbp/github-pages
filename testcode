@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adult or Minor</title>
+</head>
+<body>
+
+<p>Enter your age:</p>
+<input type="number" id="ageInput">
+<input type="number" id="roll">
+<button onclick="checkAge()">Check</button>
+<p id="result"></p>
+
+<script>
+data={18:[30,"march"],20:[40,"april"]}
+
+function checkAge() {
+  let age = document.getElementById("ageInput").value;
+  let rn= document.getElementById("roll").value;
+  let result = document.getElementById("result");
+
+  if (age in data && rn== data[age][0] ) 
+ {
+    result.textContent = data[age][1];
+  } else {
+    result.textContent = "Enter correct value.";
+  }
+}
+</script>
+
+</body>
+</html>
